@@ -28,13 +28,14 @@ import { ArcanaAuthSigner } from "@alchemy/aa-signers";
 // Register app through Arcana Developer Dashboard to get clientId
 // ARCANA_AUTH_CLIENTID = "xar_live_nnnnnnnnnn"
 const newArcanaAuthSigner = new ArcanaAuthSigner({ clientId: ARCANA_AUTH_CLIENTID });
-const authParams = {
-  authenticate: async () => {
-    await newArcanaAuthSigner.inner.connect();
-  },
-};
-
-await newArcanaAuthSigner.authenticate(authParams);
+await newArcanaAuthSigner.authenticate({
+    init () {
+        return newArcanaAuthSigner.inner.init();
+    },
+    connect () {
+        return newArcanaAuthSigner.inner.connect();
+    },
+});
 ```
 
 :::
