@@ -14,12 +14,12 @@ prev:
   text: aa-accounts
   link: /packages/aa-accounts/index
 next:
-  text: Magic
+  text: Arcana Auth
 ---
 
 # `@alchemy/aa-signers`
 
-This package contains various implementations of the `SmartAccountSigner` and `SmartAccountAuthenticator` classes defined in `aa-signer`. This repo is community maintained and we welcome contributions!
+This package contains various implementations of the `SmartAccountSigner` and `SmartAccountAuthenticator` classes defined in `aa-signer`. This repo is community-maintained and we welcome contributions!
 
 ## Getting started
 
