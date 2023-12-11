@@ -28,7 +28,7 @@ export class ArcanaAuthSigner
     inner: AuthProvider;
     private signer: WalletClientSigner | undefined;
 
-    constructor(params: { clientId: string, params: ConstructorParams } | { inner: AuthProvider }) {
+    constructor(params: { clientId: string, params: Partial<ConstructorParams> } | { inner: AuthProvider }) {
         if ("inner" in params) {
             this.inner = params.inner;
             return;

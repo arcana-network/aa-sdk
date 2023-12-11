@@ -46,13 +46,20 @@ yarn add @arcana/auth
 import { ArcanaAuthSigner } from "@alchemy/aa-signers";
 
 const newArcanaAuthSigner = new ArcanaAuthSigner({ clientId: "ARCANA_AUTH_CLIENT_ID" });
+// or use inner
 
-const authParams = {
-  authenticate: async () => {
-    await ArcanaAuthSigner.inner.connect();
-  },
-};
-await ArcanaAuthSigner.authenticate(authParams);
+// import { AuthProvider } from "@arcana/auth";
+
+// const authParams = {
+//  theme: 'light',
+//  network: 'testnet',
+//  position: 'left'
+// }
+
+// const inner = new AuthProvider("ARCANA_AUTH_CLIENT_ID", {authParams};
+// const newArcanaAuthSigner = new ArcanaAuthSigner({inner});
+
+const getUserInfo = await ArcanaAuthSigner.authenticate();
 
 const address = await ArcanaAuthSigner.getAddress();
 
@@ -77,6 +84,7 @@ const signTypedData = await signer.signTypedData(typedData);
 
 ## Developer Links
 
+- [authParams](https://authsdk-ref-guide.netlify.app/interfaces/constructorparams)
 - [Arcana Auth SDK Reference Guide](https://authsdk-ref-guide.netlify.app/)
 - [Arcana Auth Documentation](https://docs.arcana.network)
 - [GitHub: Arcana Auth](https://github.com/arcana-network/auth)

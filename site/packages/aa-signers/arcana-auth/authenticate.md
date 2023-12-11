@@ -14,7 +14,7 @@ head:
 
 # authenticate
 
-`authenticate` is a method on the `ArcanaAuthSigner` which leverages the `Arcana Auth` web SDK to authenticate a user.
+`authenticate` is a method on the `ArcanaAuthSigner` that leverages the `Arcana` Auth Web SDK to authenticate a user.
 
 This method must be called before accessing the other methods available on the `ArcanaAuthSigner`, such as signing messages or typed data or accessing user details.
 
@@ -28,14 +28,11 @@ import { ArcanaAuthSigner } from "@alchemy/aa-signers";
 // Register app through Arcana Developer Dashboard to get clientId
 // ARCANA_AUTH_CLIENTID = "xar_live_nnnnnnnnnn"
 const newArcanaAuthSigner = new ArcanaAuthSigner({ clientId: ARCANA_AUTH_CLIENTID });
-await newArcanaAuthSigner.authenticate({
-    init () {
-        return newArcanaAuthSigner.inner.init();
-    },
-    connect () {
-        return newArcanaAuthSigner.inner.connect();
-    },
-});
+// or 
+// import { AuthProvider } from "@arcana/auth";
+// const inner = new AuthProvider ("xar_live_nnnn");
+// const newArcanaAuthSigner = new ArcanaAuthSigner({inner});
+const getUserInfo = await newArcanaAuthSigner.authenticate();
 ```
 
 :::
@@ -59,9 +56,6 @@ See [Arcana Auth SDK Reference Guide](https://authsdk-ref-guide.netlify.app/inte
 
 ## Parameters
 
-### `authParams: <ArcanaAuthAuthenticationParams>`
-
-An object with the following fields:
-
-- `init: () => Promise<void>` -- a method you can define as necessary to leverage the `Arcana Auth` SDK for initialization of the SDK. For instance, in the example above, `authenticate` uses the [`init`](https://authsdk-ref-guide.netlify.app/classes/authprovider#init) method.
-- `connect: () => Promise<void>` -- a method you can define as necessary to leverage the `Arcana Auth` SDK for authentication. For instance, in the example above, `authenticate` uses the [`connect`](https://authsdk-ref-guide.netlify.app/classes/authprovider#connect) method.
+### `clientId`: Unique app identifier assigned after app registration via the Arcana Developer Dashboard
+or
+### `inner`: An AuthProvifer object. For field details, see [AuthProvider constructor](https://authsdk-ref-guide.netlify.app/classes/authprovider#constructor).
