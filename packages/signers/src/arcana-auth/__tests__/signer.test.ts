@@ -1,7 +1,7 @@
 import { AuthProvider } from "@arcana/auth";
 import { ArcanaAuthSigner } from "../signer.js";
 
-describe("Magic Signer Tests", () => {
+describe("ArcanaAuth Signer Tests", () => {
     it("should correctly get address if authenticated", async () => {
         const signer = await givenSigner();
 

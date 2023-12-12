@@ -87,29 +87,29 @@ export default defineConfig({
                 text: "Introduction",
                 link: "/choosing-a-signer",
               },
-              { text: "Magic", link: "/magic" },
-              { text: "Web3Auth", link: "/web3auth" },
-              { text: "Turnkey", link: "/turnkey" },
-              { text: "Privy", link: "/privy" },
+              { text: "Arcana Auth", link: "/arcana-auth" },
+              { text: "Capsule", link: "/capsule" },
               { text: "Dynamic", link: "/dynamic" },
               { text: "Fireblocks", link: "/fireblocks" },
-              { text: "Portal", link: "/portal" },
-              { text: "Capsule", link: "/capsule" },
               { text: "Lit Protocol", link: "/lit" },
-              {
-                text: "Particle Network",
-                link: "/particle-network",
-              },
-              {
-                text: "Arcana Auth",
-                link: "/arcana-auth",
-              },
-              { text: "Externally Owned Account (EOA)", link: "/eoa" },
-              {
+              { text: "Magic", link: "/magic" },
+              { text: "Particle Network", link: "/particle-network" }, 
+              { text: "Portal", link: "/portal" },
+              { text: "Privy", link: "/privy" },
+              { text: "Turnkey", link: "/turnkey" },     
+              { text: "Web3Auth", link: "/web3auth" },  
+              { 
                 text: "Using Your Own",
                 link: "/custom-signer",
               },
-              { text: "Contributing Your Signer", link: "/contributing" },
+              { 
+                text: "Externally Owned Account (EOA)", 
+                link: "/eoa" 
+              },
+              { 
+                text: "Contributing Your Signer", 
+                link: "/contributing" 
+              },
             ],
           },
         ],
@@ -659,6 +659,20 @@ export default defineConfig({
           {
             text: "Getting Started",
             link: "/",
+          },
+          {
+            text: "Arcana Auth Signer",
+            collapsed: true,
+            base: "/packages/aa-signers/arcana-auth",
+            items: [
+              { text: "Introduction", link: "/introduction" },
+              { text: "constructor", link: "/constructor" },
+              { text: "authenticate", link: "/authenticate" },
+              { text: "getAddress", link: "/getAddress" },
+              { text: "signMessage", link: "/signMessage" },
+              { text: "signTypedData", link: "/signTypedData" },
+              { text: "getAuthDetails", link: "/getAuthDetails" },
+            ],
           },
           {
             text: "Magic Signer",
