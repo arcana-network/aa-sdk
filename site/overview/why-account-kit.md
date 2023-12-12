@@ -65,7 +65,20 @@ Streamline your sign up flow with simple web2 login options supported by Account
 - Self-custodial wallets like MetaMask or Ledger
 - and more
 
-Account Kit integrates all the leading wallet Signers with bespoke integration guides for [Magic](/smart-accounts/signers/magic), [web3auth](/smart-accounts/signers/web3auth), [Turnkey](/smart-accounts/signers/turnkey), [Privy](/smart-accounts/signers/privy), [Dynamic](/smart-accounts/signers/dynamic), [Fireblocks](/smart-accounts/signers/fireblocks), [Portal](/smart-accounts/signers/portal), [Capsule](/smart-accounts/signers/capsule) and [Lit Protocol](/smart-accounts/signers/lit). Account Kit even supports self-custodial wallets like MetaMask or Ledger. Users can even change their Signer later via Account Kit’s [ownership transfer](/guides/transferring-ownership) functionality.
+Account Kit integrates all the leading wallet Signers with bespoke integration guides:
+- [Arcana Auth](/smart-accounts/signers/arcana-auth)
+- [Capsule](/smart-accounts/signers/capsule)
+- [Dynamic](/smart-accounts/signers/dynamic)
+- [Fireblocks](/smart-accounts/signers/fireblocks)
+- [Lit Protocol](/smart-accounts/signers/lit)
+- [Magic](/smart-accounts/signers/magic)
+- [Particle Network](/smart-accounts/signers/particle)
+- [Privy](/smart-accounts/signers/privy)
+- [Portal](/smart-accounts/signers/portal)
+- [Turnkey](/smart-accounts/signers/turnkey)
+- [web3auth](/smart-accounts/signers/web3auth)
+
+Account Kit even supports self-custodial wallets like MetaMask or Ledger. Users can even change their Signer later via Account Kit’s [ownership transfer](/guides/transferring-ownership) functionality.
 
 Learn [how to choose the right Signer for your use case in this doc](/smart-accounts/signers/choosing-a-signer).
 
